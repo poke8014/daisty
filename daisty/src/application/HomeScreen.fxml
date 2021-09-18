@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeScreenController">
+   <left>
+            <VBox prefHeight="640.0" prefWidth="290.0" style="-fx-background-color: BE9C86;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_RIGHT" text="Daisty" textAlignment="CENTER" textFill="#4e2c16">
+                     <font>
+                        <Font name="Times New Roman Bold" size="50.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="105.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/cooking.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" top="30.0" />
+                     </padding>
+                  </Label>
+            <Button fx:id="getRecipesBtn" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="290.0" styleClass="side-button" stylesheets="@application.css" text="Get Recipes" textFill="#4e2c16">
+               <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/getRecipe.png" />
+                           </image>
+                        </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="favoritesBtn" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#toFavorites" prefHeight="60.0" prefWidth="290.0" styleClass="side-button" stylesheets="@application.css" text="Favorites" textFill="#4e2c16">
+               <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/Favorites.png" />
+                           </image>
+                        </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="settingsBtn" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#toSettings" prefHeight="60.0" prefWidth="290.0" styleClass="side-button" stylesheets="@application.css" text="Settings" textFill="#4e2c16">
+               <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/Settings.png" />
+                           </image>
+                        </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="logOutBtn" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#logOut" prefHeight="60.0" prefWidth="290.0" styleClass="side-button" stylesheets="@application.css" text="Log Out" textFill="#4e2c16">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/LogOut.png" />
+                           </image>
+                        </ImageView>
+               </graphic>
+            </Button>
+               </children>
+            </VBox>
+   </left>
+   <center>
+            <VBox prefHeight="640.0" prefWidth="734.0" style="-fx-background-color: FDE4D3;" BorderPane.alignment="CENTER">
+               <children>
+            <Pane prefHeight="90.0" prefWidth="734.0">
+               <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="43.0" layoutY="21.0" maxHeight="100.0" maxWidth="292.0" minHeight="0.0" minWidth="200.0" prefHeight="50.0" prefWidth="210.0" text="Please choose a meal" textFill="#4e2c16">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Label>
+                  <ChoiceBox fx:id="meal" layoutX="311.0" layoutY="31.0" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: white; -fx-border-color: #707070; -fx-background-radius: 30; -fx-border-radius: 30;" />
+                        <Button fx:id="randomBtn" layoutX="534.0" layoutY="27.0" mnemonicParsing="false" onAction="#updateMeal" styleClass="white-button" stylesheets="@application.css" text="Randomize" textFill="#8d7463">
+                           <font>
+                              <Font name="Arial" size="20.0" />
+                           </font>
+                        </Button>
+                  <Label fx:id="warningMsg" layoutX="292.0" layoutY="67.0" text="*This box cannot be left blank" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+                  <HBox maxHeight="486.0" maxWidth="734.0" minHeight="486.0" minWidth="734.0" prefHeight="486.0" prefWidth="734.0" style="-fx-background-color: FDE4D3;">
+                     <children>
+                        <ImageView fx:id="foodImage" fitHeight="424.0" fitWidth="411.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../Pictures/ChickenGarlic.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" top="25.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox prefHeight="486.0" prefWidth="337.0">
+                           <children>
+                              <Label fx:id="foodName" alignment="TOP_CENTER" contentDisplay="TOP" minHeight="75.0" prefWidth="303.0" text="Lemon Garlic Butter Chicken Thighs with Green Beans" textAlignment="CENTER" textFill="#8d7463" visible="false" wrapText="true">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="symbol" alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="303.0" text="————★————" textAlignment="CENTER" textFill="#8d7463" visible="false" wrapText="true">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="prepTime" text="Prep Time: 25 minutes" textFill="#8d7463" visible="false" wrapText="true">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="foodIngredients" minHeight="250.0" text="Ingredients: Chicken thighs, green beans, butter, garlic cloves,paprika, onion powder, salt, pepper, chicken stock (optional:hot sauce, lemon, parsley)" textFill="#8d7463" visible="false" wrapText="true">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="foodCalories" alignment="TOP_LEFT" text="Calories: 350-450" textFill="#8d7463" visible="false" wrapText="true">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="foodSource" alignment="TOP_LEFT" text="Source: eatwell101.com" textFill="#8d7463" visible="false" wrapText="true">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox>
+                                 <children>
+                              <Button fx:id="heartBtn" mnemonicParsing="false" onAction="#addToFav" prefHeight="39.0" prefWidth="43.0" styleClass="heart-button" stylesheets="@application.css" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="-5.0" />
+                                 </HBox.margin>
+                              </Button>
+                                    <Button fx:id="getInstructions" mnemonicParsing="false" onAction="#toInstructions" styleClass="white-button" stylesheets="@application.css" text="Start Cooking!" textFill="#8d7463" visible="false">
+                                       <font>
+                                          <Font name="Arial" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+   </center>
+</BorderPane>

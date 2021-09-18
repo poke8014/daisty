@@ -1,0 +1,9 @@
+123
+hu
+hu
+2021-04-21
+true
+false
+false
+[egg]
+1500

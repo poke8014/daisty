@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsScreenController">
+    <center>
+        <GridPane prefHeight="389.0" prefWidth="862.0" style="-fx-background-color: #BE9C86;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="429.0" minWidth="10.0" prefWidth="143.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="142.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="37.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="122.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="139.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="149.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="132.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <CheckBox fx:id="vgnBox" mnemonicParsing="false" text="Vegan" textFill="#4e2c16" GridPane.columnIndex="6">
+                    <GridPane.margin>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="90.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></CheckBox>
+                <CheckBox fx:id="vgtrn" mnemonicParsing="false" text="Vegetarian" textFill="#4e2c16" GridPane.columnIndex="7">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="90.0" />
+                    </GridPane.margin></CheckBox>
+                <CheckBox fx:id="isOther" mnemonicParsing="false" text="None" textFill="#4e2c16" GridPane.columnIndex="8">
+                    <GridPane.margin>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="90.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></CheckBox>
+                <DatePicker fx:id="datePicker" promptText="mm/dd/yyyy" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="140.0" left="5.0" right="5.0" top="30.0" />
+                    </GridPane.margin></DatePicker>
+                <Label text="Date of Birth" textFill="#4e2c16" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="140.0" left="30.0" right="20.0" top="30.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></Label>
+                <Label text="Last Name" textFill="#4e2c16" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="40.0" left="30.0" right="20.0" top="20.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></Label>
+                <Label fx:id="fnLbl" text="First Name" textFill="#4e2c16" GridPane.columnIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="30.0" left="30.0" right="20.0" top="90.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></Label>
+                <TextField fx:id="boxFn" GridPane.columnIndex="3">
+                    <GridPane.margin>
+                        <Insets bottom="30.0" left="5.0" right="5.0" top="90.0" />
+                    </GridPane.margin></TextField>
+                <TextField fx:id="boxLn" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="40.0" left="5.0" right="5.0" top="20.0" />
+                    </GridPane.margin></TextField>
+                <Label text="Eating Practices" textFill="#4e2c16" GridPane.columnIndex="5">
+                    <GridPane.margin>
+                        <Insets bottom="30.0" left="5.0" right="5.0" top="90.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></Label>
+                <Label text="Allergies" textFill="#4e2c16" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="40.0" left="5.0" right="5.0" top="20.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></Label>
+                <Label text="Calorie Intake" textFill="#4e2c16" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="140.0" left="5.0" right="5.0" top="30.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font></Label>
+                <ComboBox fx:id="calorieCount" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="140.0" left="20.0" right="5.0" top="30.0" />
+                    </GridPane.margin></ComboBox>
+                <Label fx:id="fnResponse" text="*This field cannot be left blank" textFill="RED" visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2">
+                    <GridPane.margin>
+                        <Insets left="5.0" top="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="boxAllergy" promptText="Enter Allergy" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="40.0" left="20.0" right="5.0" top="20.0" />
+                    </GridPane.margin>
+                </TextField>
+                <Button fx:id="addAllergy" maxWidth="105.0" minWidth="105.0" mnemonicParsing="false" onAction="#handleAddAllergy" prefWidth="105.0" text="Add Allergy" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" top="60.0" />
+                    </GridPane.margin>
+                </Button>
+                <ComboBox fx:id="viewAllergies" minWidth="120.0" prefHeight="27.0" prefWidth="124.0" promptText="View Allergies" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="40.0" left="20.0" top="20.0" />
+                    </GridPane.margin>
+                </ComboBox>
+                <Label fx:id="lnResponse" text="*This field cannot be left blank" textFill="RED" visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="70.0" left="5.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="dobResponse" text="*This field cannot be left blank" textFill="RED" visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <GridPane.margin>
+                        <Insets left="5.0" top="120.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="calResponse" text="*This field cannot be left blank" textFill="RED" visible="false" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" top="120.0" />
+                    </GridPane.margin>
+                </Label>
+            <Label text="(Please enter using singular form if applicable)" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="-55.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="epResponse" text="Please select one of the following:" textFill="RED" visible="false" GridPane.columnIndex="6" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets left="90.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+            </children>
+        </GridPane>
+    </center>
+    <left>
+        <Pane prefHeight="420.0" prefWidth="80.0" style="-fx-background-color: #FDE4D3#FDE4D3;" BorderPane.alignment="CENTER" />
+    </left>
+    <top>
+        <Pane prefHeight="120.0" prefWidth="1024.0" style="-fx-background-color: #FDE4D3;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="443.0" layoutY="40.0" text="Welcome to Daisty" textFill="#4e2c16">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="322.0" layoutY="66.0" text="Let's get you started by answering some questions!" textFill="#4e2c16">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="391.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Pictures/chef.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="608.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Pictures/chef.png" />
+                    </image>
+                </ImageView>
+            </children></Pane>
+    </top>
+    <right>
+        <Pane prefHeight="420.0" prefWidth="80.0" style="-fx-background-color: #FDE4D3;" BorderPane.alignment="CENTER" />
+    </right>
+    <bottom>
+        <Pane prefHeight="120.0" prefWidth="1024.0" style="-fx-background-color: #FDE4D3;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="edit" layoutX="860.0" layoutY="43.0" mnemonicParsing="false" onAction="#enableEdit" prefHeight="30.0" prefWidth="81.0" styleClass="white-button" stylesheets="@application.css" text="Edit" textFill="#4e2c16">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+            <Button fx:id="update" layoutX="741.0" layoutY="43.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="30.0" prefWidth="81.0" styleClass="white-button" stylesheets="@application.css" text="Submit" textFill="#4e2c16" visible="false">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" layoutX="85.0" layoutY="43.0" mnemonicParsing="false" onAction="#backHome" prefHeight="30.0" prefWidth="81.0" styleClass="white-button" stylesheets="@application.css" text="Back" textFill="#4e2c16">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>

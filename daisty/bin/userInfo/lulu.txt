@@ -1,0 +1,17 @@
+123
+lu
+lu
+2021-04-08
+false
+false
+true
+[egg]
+1500
+otherBreakfastSkillet
+vegetMarmaladeFrenchToastSandwiches
+vegetOnepanEggAndVeg
+otherWaffleSandwich
+vegetOmeletInAMug
+otherTunaCroissantSandwich
+vegetWakeMeUpCoffeeSmoothie
+otherTunaCroissantSandwich

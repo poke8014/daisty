@@ -1,0 +1,46 @@
+.heart-button {
+	-fx-shape: "M 450 350 Q 300 300 250 200 C 200 100 350 0 450 100 C 550 0 700 100 650 200 Q 600 300 450 350";
+	-fx-border-color:  #4e2c16;
+	-fx-background-color: transparent;
+}
+
+.white-button {
+	-fx-background-color: #FFFFFF;
+	-fx-border-radius: 30;
+	-fx-background-radius: 30;
+	-fx-border-color: #707070;
+}
+
+.white-button:hover {
+	-fx-background-color: #D3D3D3;
+}
+
+.side-button {
+	-fx-background-color: #BE9C86;
+}
+
+.side-button-on {
+	-fx-background-color: #ccb09e;
+}
+
+.side-button:hover {
+	-fx-background-color: #ccb09e;
+}
+
+.heart-button:hover {
+	-fx-background-color: #ff9999;
+}
+
+.heart-button-favorited {
+	-fx-shape: "M 450 350 Q 300 300 250 200 C 200 100 350 0 450 100 C 550 0 700 100 650 200 Q 600 300 450 350";
+	-fx-background-color: #ff3a19;
+}
+
+.heart-button-favorited:hover {
+	-fx-background-color: #ff9999;
+}
+
+.scroll-pane {
+	-fx-background: transparent;
+	-fx-background-color: transparent;
+}

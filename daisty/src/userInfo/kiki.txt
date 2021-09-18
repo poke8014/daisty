@@ -1,0 +1,9 @@
+123
+Ki
+Ki
+2021-04-15
+true
+false
+false
+[egg]
+1500
